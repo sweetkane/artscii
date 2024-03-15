@@ -13,7 +13,7 @@ def setup_arg_parser() -> argparse.Namespace:
         epilog="""
         Copyright © 2024 Kane Sweet <kanesweet11@gmail.com>
         Distributed under the Apache License Version 2.0 (Apache-2.0)
-        For further details, visit https://github.com/sweetkane/"""
+        For further details, visit https://github.com/sweetkane/artscii"""
     )
     
     parser.add_argument(
