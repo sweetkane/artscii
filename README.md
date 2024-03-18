@@ -1,5 +1,5 @@
 # 🖼️ artscii
-This tool uses AI to generate ascii art from a given prompt.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+This tool uses AI to generate ascii art from a given prompt.             
 ![Screenshot 2024-03-13 at 5 06 36 PM](https://github.com/sweetkane/artscii/assets/71854758/451a3c17-ab7c-4421-8dd3-a52cb007abd0)
 ## Installation
 ### Homebrew
@@ -37,6 +37,7 @@ artscii -c "a scene in the swiss alps"
 The cache will be created as `artscii.cache.json` in your working directory. The program will append to the cache if one already exists.
 
 ## Gallery
+<img width="544" alt="Screenshot 2024-03-18 at 12 49 35 PM" src="https://github.com/sweetkane/artscii/assets/71854758/000318b6-bbbb-4665-9c86-9f379f98873b">
 <img width="689" alt="Screenshot 2024-03-18 at 12 15 48 PM" src="https://github.com/sweetkane/artscii/assets/71854758/46465c1e-0a76-4bde-b11f-870416849f92">
 <img width="711" alt="Screenshot 2024-03-18 at 12 22 39 PM" src="https://github.com/sweetkane/artscii/assets/71854758/674ce661-aa3d-4a5c-bfe1-46f22ec6f6ac">
 <img width="667" alt="Screenshot 2024-03-18 at 12 23 53 PM" src="https://github.com/sweetkane/artscii/assets/71854758/9ca1e59c-8eeb-4e62-b431-f9feb2760e40">
@@ -44,4 +45,5 @@ The cache will be created as `artscii.cache.json` in your working directory. The
 
 ## Packages Used
 https://github.com/TheZoraiz/ascii-image-converter
+
 
