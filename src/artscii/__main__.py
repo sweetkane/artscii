@@ -56,6 +56,7 @@ def main():
     args = setup_arg_parser()
 
     # generate image
+    print("Generating image...", end="\r")
     headers = {
         'Authorization': f"Bearer {OPENAI_API_KEY}",
     }
@@ -70,6 +71,7 @@ def main():
         headers=headers, 
         json=json_data
     ).json()
+    print("", end="\r")
 
     # convert to ascii
     img_url = response["data"][0]["url"]
