@@ -5,6 +5,7 @@ import requests
 import json
 import subprocess
 import argparse
+from importlib import metadata
 
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
@@ -16,11 +17,10 @@ def setup_arg_parser() -> argparse.Namespace:
         Distributed under the Apache License Version 2.0 (Apache-2.0)
         For further details, visit https://github.com/sweetkane/artscii"""
     )
-    
     parser.add_argument(
-        'prompt', 
-        nargs=1, 
-        help='description of the desired image'
+        *['-v', '--version'], 
+        action='version', 
+        version=metadata.version('artscii')
     )
     parser.add_argument(
         *['-c', '--cache'],
@@ -28,10 +28,14 @@ def setup_arg_parser() -> argparse.Namespace:
         action='store_true'
     )
     parser.add_argument(
-        #*['-f', '--flags'], 
-        'flags',
+        'prompt', 
+        nargs=1, 
+        help='description of the desired image'
+    )
+    parser.add_argument(
+        'options',
         nargs=argparse.REMAINDER,
-        help='flags to be passed to ascii-image-converter. run `ascii-image-converter -h` for more details'
+        help='options to be passed to ascii-image-converter. run `ascii-image-converter -h` to see list of options'
     )
     return parser.parse_args()
     
@@ -69,7 +73,7 @@ def main():
 
     # convert to ascii
     img_url = response["data"][0]["url"]
-    subprocess.call(["ascii-image-converter", img_url] + args.flags)
+    subprocess.call(["ascii-image-converter", img_url] + args.options)
 
     # handle cache
     if (args.cache):
