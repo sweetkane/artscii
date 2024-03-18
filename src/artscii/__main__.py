@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import sys
 import os
 import requests
 import json
@@ -38,7 +37,7 @@ def setup_arg_parser() -> argparse.Namespace:
     
 
 def check_requirements():
-    if subprocess.run(["which", "ascii-image-converter"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode != 0:
+    if subprocess.run(["ascii-image-converter", "-h"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode != 0:
         print("ERR: Missing `ascii-image-converter` package.")
         print("ERR: See: https://github.com/TheZoraiz/ascii-image-converter?tab=readme-ov-file#installation")
         exit(1)
@@ -83,4 +82,6 @@ def main():
             cachedic["openai_responses"].append(response)
             json.dump(cachedic, fp)
 
-main()
+            
+if __name__ == '__main__':
+    main()
