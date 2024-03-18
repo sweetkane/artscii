@@ -5,9 +5,9 @@ This tool uses AI to generate ascii art from a given prompt.
 ### Homebrew
 To install artscii with Homebrew, run:
 ```
-brew install sweetkane/artscii/artscii
+brew install sweetkane/tap/artscii
 ```
-[tap repo](https://github.com/sweetkane/homebrew-artscii)
+[tap repo](https://github.com/sweetkane/homebrew-tap)
 
 ## Usage
 Note: To use artscii, the `OPENAI_API_KEY` environment variable must be set.
