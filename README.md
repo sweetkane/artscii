@@ -41,7 +41,7 @@ artscii "a scene in the swiss alps" --braille --color
 A full list of options can be found [here](https://github.com/TheZoraiz/ascii-image-converter?tab=readme-ov-file#flags)
 
 ### Caching
-You can cache the OpenAI API response, which contains the raw image, using the `-c` option before the prompt.
+You can cache the OpenAI API response json, which contains a link to the raw image, by adding the `-c` flag before the prompt.
 It will look like this:
 ```
 artscii -c "a scene in the swiss alps"
