@@ -1,6 +1,6 @@
 # 🖼️ artscii
-This tool uses AI to generate ascii art from a given prompt.
-
+This tool uses AI to generate ascii art from a given prompt.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+![Screenshot 2024-03-13 at 5 06 36 PM](https://github.com/sweetkane/artscii/assets/71854758/451a3c17-ab7c-4421-8dd3-a52cb007abd0)
 ## Installation
 ### Homebrew
 To install artscii with Homebrew, run:
