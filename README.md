@@ -7,6 +7,7 @@ To install artscii with Homebrew, run:
 ```
 brew install sweetkane/artscii/artscii
 ```
+[tap repo](https://github.com/sweetkane/homebrew-artscii)
 
 ## Usage
 Note: To use artscii, the `OPENAI_API_KEY` environment variable must be set.
