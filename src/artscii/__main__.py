@@ -50,19 +50,14 @@ def check_requirements():
         print("ERR: See: https://platform.openai.com/docs/quickstart/step-2-set-up-your-api-key")
         exit(1)
 
-
-def main():
-    check_requirements()
-    args = setup_arg_parser()
-
-    # generate image
+def generate(prompt):
     print("Generating image...", end="\r")
     headers = {
         'Authorization': f"Bearer {OPENAI_API_KEY}",
     }
     json_data = {
         'model': 'dall-e-3',
-        'prompt': args.prompt[0] + " (this image will be converted to ascii art)",
+        'prompt': prompt + " (this image will be converted to ascii art)",
         'n': 1,
         'size': '1024x1024',
     }
@@ -72,21 +67,31 @@ def main():
         json=json_data
     ).json()
     print("", end="\r")
+    return response
 
-    # convert to ascii
+
+def cache(response):
+    try:
+        with open('artscii.cache.json', 'r') as fp:
+            cachedic = json.loads(fp.read())
+    except:
+            cachedic = {"openai_responses": []}
+    with open('artscii.cache.json', 'w') as fp:
+        cachedic["openai_responses"].append(response)
+        json.dump(cachedic, fp)
+
+
+def main():
+    check_requirements()
+    args = setup_arg_parser()
+
+    response = generate(args.prompt[0])
+
     img_url = response["data"][0]["url"]
     subprocess.call(["ascii-image-converter", img_url] + args.options)
 
-    # handle cache
     if (args.cache):
-        try:
-            with open('artscii.cache.json', 'r') as fp:
-                cachedic = json.loads(fp.read())
-        except:
-            cachedic = {"openai_responses": []}
-        with open('artscii.cache.json', 'w') as fp:
-            cachedic["openai_responses"].append(response)
-            json.dump(cachedic, fp)
+        cache(response)
 
             
 if __name__ == '__main__':
