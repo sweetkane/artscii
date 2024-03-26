@@ -53,6 +53,7 @@ The cache will be created as `artscii.cache.json` in your working directory. The
 <img width="689" alt="Screenshot 2024-03-18 at 12 15 48 PM" src="https://github.com/sweetkane/artscii/assets/71854758/46465c1e-0a76-4bde-b11f-870416849f92">
 <img width="711" alt="Screenshot 2024-03-18 at 12 22 39 PM" src="https://github.com/sweetkane/artscii/assets/71854758/674ce661-aa3d-4a5c-bfe1-46f22ec6f6ac">
 <img width="667" alt="Screenshot 2024-03-18 at 12 23 53 PM" src="https://github.com/sweetkane/artscii/assets/71854758/9ca1e59c-8eeb-4e62-b431-f9feb2760e40">
+<img width="976" alt="Screenshot 2024-03-26 at 4 19 49 PM" src="https://github.com/sweetkane/artscii/assets/71854758/47619704-de82-4448-a503-34748582d32c">
 
 
 ## Packages Used
