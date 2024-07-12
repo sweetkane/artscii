@@ -59,4 +59,10 @@ The cache will be created as `artscii.cache.json` in your working directory. The
 ## Packages Used
 https://github.com/TheZoraiz/ascii-image-converter
 
+## License
+
+This project is licensed under the Apache License, Version 2.0. See the [LICENSE](LICENSE) file for details.
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 
